@@ -1,0 +1,15 @@
+s = input() #This company is not poor at all.
+
+str1 = s.split('not')
+str2 = s.split('at all')
+
+d = str1[0] + 'good' + str2[1]
+print(d) # This company is good.
+
+s = input() #This company is not good at all.
+
+str1 = s.find('not')
+str2 = s.find('at all') + 6
+
+d = s[:str1] + 'good' + s[str2:]
+print(d) # This company is good.
