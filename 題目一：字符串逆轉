@@ -1,0 +1,13 @@
+#請寫一個函數，接受一個字符串，並返回這個字符串的逆序版本。例如，輸入 "hello" 應該返回 "olleh"。
+s = input("請輸入一個單字")
+
+d = []
+for i in range(-1,-len(s)-1,-1):
+  d.append(s[i])
+d = ''.join(d)
+print(d)
+
+s = input("請輸入一個單字")
+
+reversed_word = s[::-1]
+print(reversed_word)
