@@ -1,0 +1,10 @@
+#給定一個列表，請寫一個函數來篩選出所有的偶數並返回它們。例如，輸入 [1, 2, 3, 4, 5, 6] 應該返回 [2, 4, 6]。
+input_string = input("請輸入一組以空隔間隔的數字")
+list = input_string.split(" ")
+number_list = [int(item) for item in list]
+result = []
+for i in number_list:
+  if i % 2 == 0:
+    result.append(i)
+
+print(result)
