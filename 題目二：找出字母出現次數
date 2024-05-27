@@ -1,0 +1,13 @@
+#請寫一個函數，計算一個字符串中每個字母出現的次數，並將結果存儲在字典中返回。例如，輸入 "hello" 應該返回 {'h': 1, 'e': 1, 'l': 2, 'o': 1}。
+s = input("請輸入一個單字")
+
+result = {}
+def count(s):
+  for i in s:
+    if i in result:
+     result[i] += 1
+    else: result[i] = 1
+
+count(s)
+print(result)
+
