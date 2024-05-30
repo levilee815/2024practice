@@ -1,0 +1,20 @@
+#編寫一個程序，接受兩個正整數輸入 a 和 b，然後找出並返回這兩個數字的最小公倍數（LCM）。提示：從較大的數字開始，使用 while 迴圈檢查當前數字是否同時是 a 和 b 的倍數。
+while True:
+  try:
+    a = int(input("請輸入第一個正整數"))
+    b = int(input("請輸入第二個正整數"))
+    if a <= 0 or b <= 0:
+      print("請輸入大於零的正整數")
+    else:
+      break
+  except ValueError:
+    print("無效輸入，請確保您輸入的是整數")
+
+d = a if a > b else b
+
+while True:
+  if d % a == 0 and d % b == 0:
+    break
+  d += 1
+
+print(d)
