@@ -1,0 +1,21 @@
+#一個「快樂數」是指一個正整數，在重複取其所有位數的平方和後，最終得到 1 的數。
+a = int(input("請輸入下邊界："))
+b = int(input("請輸入上邊界："))
+
+
+def is_happy_number(num):
+  seen_number = set()
+  while num !=1 and num not in seen_number:
+    seen_number.add(num)
+    num = sum(int(digit)**2 for digit in str(num))
+  return num == 1
+
+def find_happy_numbers(lower_bound, upper_bound):
+  happy_numbers = []
+  for i in range(lower_bound, upper_bound+1):
+    if is_happy_number(i) == True:
+      happy_numbers.append(i)
+  return happy_numbers
+
+print(find_happy_numbers(a, b))
+    
