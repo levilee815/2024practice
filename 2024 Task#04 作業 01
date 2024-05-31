@@ -1,0 +1,16 @@
+#練習：字串的位置分佈
+s = 'Here are UPPERCASE and lowercase chars.'
+
+def position(string):
+  d = {}
+  for i in range(len(string)):
+    char = string[i]
+    if char in d:
+      d[char].append(i+1)
+    else: 
+      d[char] = [i+1]
+    
+  return d
+
+d = position(s)
+print(d)
