@@ -1,0 +1,54 @@
+#練習：map(…) function 是 Python 中常用的一種 functional method，可以對列表內的所有元素進行同一個 function 操作。 接下來，請你試試看在 Python 中實現一個自定義的 map(F, L) 方法。
+#解法一
+def add1(n):
+  return [i+1 for i in n]
+
+def is_Prime(numbers):
+
+  def isPrime(n):
+    if n <= 1:
+      return False
+    for i in range(2, int(n**0.5) + 1):
+      if n % i == 0:
+          return False
+    return True
+
+  return[isPrime(number) for number in numbers]   
+
+def f(L, F):
+  return F(L)
+L = [1,2,3,4,5,6]
+F = add1
+print(f(L, F)) # [2,3,4,5,6,7]
+
+L = [2,3,4,5,6,7] 
+F = is_Prime
+print(f(L, F)) # [True,True,False,True,False,True]
+
+#解法二
+def add1(n):
+  return n+1
+
+def isPrime(n):
+  if n <= 1:
+    return False
+  for i in range(2, int(n**0.5) + 1):
+    if n % i == 0:
+       return False
+  return True
+
+def f(L, F):
+  res = []
+  for i in L:
+    res.append(F(i))
+  return res
+
+L = [1,2,3,4,5,6]
+F = add1
+print(f(L, F)) # [2,3,4,5,6,7]
+
+L = [2,3,4,5,6,7] 
+F = isPrime
+print(f(L, F)) # [True,True,False,True,False,True]
+
+
