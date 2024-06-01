@@ -1,0 +1,15 @@
+#寫一個函數 longest_word(sentence)，輸入一個由空格分隔的單詞組成的句子 sentence，返回句子中最長的單詞。如果有多個最長單詞，返回其中一個即可。
+sentence = "La La Lost You"
+
+def longest_word(sentence):
+  words = sentence.split(" ")
+  max_length = 0
+  longest = ""
+  for item in words:
+    if len(item) > max_length:
+      longest = item
+      max_length = len(item)
+  return longest
+
+result = longest_word(sentence)
+print(result)  # "hello" 或 "world"
