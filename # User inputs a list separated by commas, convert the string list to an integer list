@@ -1,0 +1,7 @@
+# User inputs a list separated by commas, convert the string list to an integer list
+user_input = input("enter a list(separated by a comma)")
+input_list = user_input.split(',')
+
+input_list = [int(i) for i in input_list]
+
+print(input_list)
