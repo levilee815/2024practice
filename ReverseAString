@@ -1,0 +1,14 @@
+"""
+Write a program that takes a string as input and uses a while loop to reverse the string.
+"""
+input("enter a word: ")
+
+word = "abcdefg"
+chac_list = []
+index = len(word) - 1
+while index >= 0:
+    chac_list.append(word[index])
+    index = index - 1
+
+reverse_word = ''.join(chac_list)
+print(reverse_word)
